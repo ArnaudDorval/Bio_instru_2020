@@ -1,23 +1,26 @@
-#include <SoftwareSerial.h>
-SoftwareSerial myBluetooth(10,11); //RX TX
+//#include <SoftwareSerial.h>
+//SoftwareSerial myBluetooth(10,11); //RX TX
 
-int analogPin = A3;
+int analogPin = A0;
 
+int digitalIR = 50;
+int digitalR = 52;
 
 String command;
 int timeStamp = 0;
 int val;
  
 void setup() {
-    myBluetooth.begin(9600);
+    Serial1.begin(9600);
     Serial.begin(115200); 
+    analogReadResolution(16);
 }
  
 void loop() {
 
-    while (myBluetooth.available() > 0) {
+    while (Serial1.available() > 0) {
         delay(3);  //delay to allow buffer to fill
-          char c = myBluetooth.read();  //gets one byte from serial buffer
+          char c = Serial1.read();  //gets one byte from serial buffer
           command += c; //makes the string readString
     }
     
@@ -25,30 +28,36 @@ void loop() {
          
         if(command.equals("init")){
             Serial.println("init");
-            myBluetooth.write("OK\n");
+            Serial1.write("OK\n");
         }
         else if(command.equals("b")){
             //Serial.println("baseline");
-            val = analogRead(analogPin);
+            val = 0;
+            for (int i = 0; i <= 5; i++) {
+              val += analogRead(analogPin);
+            }
+            val = val/5;
             timeStamp = millis();
             String msg = String(val) + ";" + String(timeStamp) + "\n";
-            char copy[10];
-            msg.toCharArray(copy, 10);
-            myBluetooth.write(copy);
+            int l = msg.length();
+            //msg = String(l) + "l" + msg;
+            char copy[15];
+            msg.toCharArray(copy, 15);
+            Serial1.write(copy);
             Serial.print(msg);
         }
         else if(command.equals("data")){
             Serial.println("data");
-            myBluetooth.write("OK\n");
+            Serial1.write("OK\n");
         }
         else if(command.equals("reboot")){
             Serial.println("reboot");
-            myBluetooth.write("OK\n");
+            Serial1.write("OK\n");
         }
         else{
             Serial.println(command);
             Serial.println("Invalid command");
-            myBluetooth.write("Invalid\n");
+            Serial1.write("Invalid\n");
         }
         command = "";
     }
