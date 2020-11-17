@@ -2,7 +2,7 @@
 %98D332202FDA
 
 %bluetoothlist;
-
+clear;
 myDataSet = [0 0];
 RawData = "rawData";
 
@@ -12,8 +12,11 @@ a = read(hc06, 2, "string");
 disp(a);
 for index = 1:10
    write(hc06, "b");
-   a = read(hc06, 9, "string");
-   RawData = [RawData; a];
+   a = read(hc06, 13, "string");
+   strn = regexprep(a,'[l]','');
+   n = str2num(strn);
+   %a = read(hc06, n + 1, "string");
+   %RawData = [RawData; a];
 end
 disp(RawData);
 
