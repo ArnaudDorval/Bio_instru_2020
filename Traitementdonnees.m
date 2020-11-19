@@ -22,9 +22,9 @@ RawData = [Indicateur ValuesBruitees Timestamp];
 plot(RawData(:,2))
 Data = RawData(:,2);
 
-%% Filtrage, on usilise un filtre à moyenne mobile de 1/10 de la largeur des bandes de données
+%% Filtrage, on usilise un filtre à moyenne mobile de 1/L de la largeur des bandes de données
 hold on
-L = 8; % 1/L est la fraction le la largeur d'une bande, Plus on diminue L, plus le filtre sera intense
+L = 25; % 1/L est la fraction le la largeur d'une bande, Plus on diminue L, plus le filtre sera intense
 M = floor(Nbdata/(4*L)); % 4 parce qu'on a 4 bandes de données par mesure
 Filtre1 = 1/M*ones(M,1);
 T = conv(Filtre1,Data);
