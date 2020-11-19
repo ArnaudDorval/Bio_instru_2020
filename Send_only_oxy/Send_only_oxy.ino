@@ -48,10 +48,10 @@ void loop() {
 
 void sendData(String pType){
   val = 0;
-  for (int i = 0; i <= 5; i++) {
+  for (int i = 0; i <= 500; i++) {
     val += analogRead(analogPin);
   }
-  val = val/5;
+  val = val/500;
   timeStamp = millis();
   String msg = pType + ";" + String(val) + ";" + String(timeStamp) + "\n";
   int l = msg.length();
