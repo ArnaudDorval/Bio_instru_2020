@@ -9,9 +9,9 @@ load('ArnaudParsedData');
 load('Dataraw1');
 
 
-Light = mean(EtienneSetA(4:4:end,2));
-IR = (EtienneSetA(1:4:end-2,2)-Light)*3.3/(2^16);
-R = (EtienneSetA(3:4:end,2)-Light)*3.3/(2^16);
+Light = mean(ArnaudSetD(4:4:end,2));
+IR = (ArnaudSetD(1:4:end-2,2)-Light)*3.3/(2^16);
+R = (ArnaudSetD(3:4:end,2)-Light)*3.3/(2^16);
 
 % plot(R)
 % plot(IR)
@@ -57,8 +57,8 @@ IRAC = conv(IRAC,f2);
 RAC = -RAC(L:length(RAC)-L);
 IRAC = -IRAC(L:length(IRAC)-L);
 
-RAC = RAC - min(RAC);
-IRAC = IRAC - min(IRAC);
+RAC = RAC - mean(RAC);
+IRAC = IRAC - mean(IRAC);
 
 
 plot(RAC)
