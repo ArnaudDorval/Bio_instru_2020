@@ -13,8 +13,8 @@ Light = mean(EtienneSetA(4:4:end,2));
 IR = (EtienneSetA(1:4:end-2,2)-Light)*3.3/(2^16);
 R = (EtienneSetA(3:4:end,2)-Light)*3.3/(2^16);
 
-% plot(R)
-% plot(IR)
+plot(R)
+plot(IR)
 
 %% Composante DC des signaux
 
@@ -46,7 +46,7 @@ IRAC = highpass(IR,ParaPH);
 
 
 
-L2 = 20; %% Largeur de filtre, Plus L est grand plus le filtrage est intense
+L2 = 10; %% Largeur de filtre, Plus L est grand plus le filtrage est intense
 f2 = 1/L2*ones(L2,1);
 
 RAC= conv(RAC,f2);
@@ -60,6 +60,15 @@ IRAC = -IRAC(L:length(IRAC)-L);
 RAC = RAC - min(RAC);
 IRAC = IRAC - min(IRAC);
 
+% 
+% HpkR = findpeaks(RAC,1,'MinPeakDistance',70);
+% LpkR = -findpeaks(-RAC,1,'MinPeakDistance',70);
+% 
+% HpkIR = findpeaks(IRAC,1,'MinPeakDistance',70);
+% LpkIR = -findpeaks(-RAC,1,'MinPeakDistance',70);
+% 
+% RAC = HpkR-LpkR;
+% IRAC = HpkIR-LpkIR;
 
 plot(RAC)
 plot(IRAC)
@@ -69,6 +78,6 @@ legend('R','IR')
 
 
 %%
-SaO2 =110-25*((rms(RAC)/RDC)./(rms(IRAC)/IRDC));
-meanSaO2 = trimmean(SaO2,10) % trouve la moyenne des valeurs excluant les 20% des valeurs
+SaO2 =110-25*(log10(RAC)./log10(IRAC));
+meanSaO2 = trimmean(SaO2,1) % trouve la moyenne des valeurs excluant les 20% des valeurs
 %%les plus loin de la moyenne (données abérantes)
