@@ -79,7 +79,7 @@ void getDataSet(){
   int currentTime = startTime;
 
   //get du data pendant 10seconde
-  while (currentTime - startTime < 3000){
+  while (currentTime - startTime < 10000){
     digitalWrite(digitalIR, LOW);
     digitalWrite(digitalR, LOW);
     sendData("B", startTime);
@@ -104,11 +104,11 @@ void getDataSet(){
 void sendData(String pType, int pStartTime){
   val = 0;
 
-  //filtre a moyenne mobile de 500
-  for (int i = 0; i <= 500; i++) {
+  //filtre a moyenne mobile de 5
+  for (int i = 0; i <= 5; i++) {
     val += analogRead(analogPin);
   }
-  val = val/500;
+  val = val/5;
   timeStamp = millis() - pStartTime;
   String msg = pType + ";" + String(val) + ";" + String(timeStamp) + "\n";
   int l = msg.length();
