@@ -12,6 +12,7 @@ int digitalWait = 30;
 String command;
 int timeStamp = 0;
 int val;
+int transitDelay = 200:
  
 void setup() {
     Serial.begin(57600);
@@ -82,15 +83,20 @@ void getDataSet(){
   while (currentTime - startTime < 10000){
     digitalWrite(digitalIR, LOW);
     digitalWrite(digitalR, LOW);
+    
+    delayMicroseconds(transitDelay);
     sendData("B", startTime);
   
     digitalWrite(digitalR, HIGH);
+    delayMicroseconds(transitDelay);
     sendData("R", startTime);
   
     digitalWrite(digitalR, LOW);
+    delayMicroseconds(transitDelay);
     sendData("B", startTime);
     
     digitalWrite(digitalIR, HIGH);
+    delayMicroseconds(transitDelay);
     sendData("I", startTime);
 
     currentTime = millis();
@@ -103,12 +109,13 @@ void getDataSet(){
 
 void sendData(String pType, int pStartTime){
   val = 0;
-
+  int moy_filter = 4;
+  
   //filtre a moyenne mobile de 5
-  for (int i = 0; i <= 5; i++) {
+  for (int i = 0; i <= moy_filter; i++) {
     val += analogRead(analogPin);
   }
-  val = val/5;
+  val = val/(moy_filter + 1);
   timeStamp = millis() - pStartTime;
   String msg = pType + ";" + String(val) + ";" + String(timeStamp) + "\n";
   int l = msg.length();
