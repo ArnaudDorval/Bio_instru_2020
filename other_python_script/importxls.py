@@ -41,7 +41,7 @@ z2, _ = signal.lfilter(bl, al, z, zi=zi*z[0])
 yl = signal.filtfilt(bl, al, xn)
 
 #High=pass filter section
-bh, ah = signal.butter(3, 0.007, btype='high', analog=False)
+bh, ah = signal.butter(3, 0.009, btype='high', analog=False)
 yh = signal.filtfilt(bh, ah, yl)
 
 
