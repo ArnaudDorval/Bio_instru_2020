@@ -43,7 +43,7 @@ while data != "END\n":
     if data != "END\n":
         d = data.rstrip()
         datasplit = d.split(";")
-        if len(tagData) != 4251:
+        if len(tagData) != 4249:
             tagData.append(datasplit[0])
             valueData.append(datasplit[1])
             timeData.append(datasplit[2])
