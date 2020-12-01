@@ -46,7 +46,7 @@ while data != "END\n":
     if data != "END\n":
         d = data.rstrip()
         datasplit = d.split(";")
-        if len(tagData) != 4251:
+        if len(tagData) != 4249:
             tagData.append(datasplit[0])
             valueData.append(datasplit[1])
             timeData.append(datasplit[2])
@@ -116,17 +116,29 @@ for i in range(len(prediction)):
 y_data = "Value"
 x_data = "Time"
 
-pyplot.figure
+pyplot.figure(1)
+pyplot.scatter(df_baseline[x_data], df_baseline[y_data])
+pyplot.scatter(df_ir[x_data], df_ir[y_data])
+pyplot.scatter(df_r[x_data], df_r[y_data])
+pyplot.xlabel(x_data)
+pyplot.ylabel(y_data)
+pyplot.title('Raw Data')
+pyplot.legend(('signal baseline', 'signal r', 'signal ir'), loc='best')
+pyplot.grid(True)
+
+pyplot.figure(2)
 pyplot.subplot(3, 1, 1)
 style.use("ggplot")
 pyplot.scatter(df_ir[x_data], df_ir[y_data])
 pyplot.scatter(df_r[x_data], df_r[y_data])
-pyplot.legend(('noisy signal ir', 'noisy signal ir'), loc='best')
+pyplot.legend(('noisy signal ir', 'noisy signal r'), loc='best')
 pyplot.xlabel(x_data)
 pyplot.ylabel(y_data)
+pyplot.title('processed data')
 pyplot.grid(True)
 
-pyplot.figure
+
+pyplot.figure(2)
 pyplot.subplot(3, 1, 2)
 pyplot.plot(ir_data[x_data], ir_data[y_data])
 pyplot.plot(r_data[x_data], r_data[y_data])
@@ -135,7 +147,8 @@ pyplot.xlabel(x_data)
 pyplot.ylabel(y_data)
 pyplot.grid(True)
 
-pyplot.figure
+
+pyplot.figure(2)
 pyplot.subplot(3, 1, 3)
 pyplot.plot(df_r[x_data], SaO2)
 pyplot.legend(('SaO2'), loc='best')
