@@ -22,7 +22,7 @@ def filterir(ppandas):
     xn = df_ir[y_data].to_numpy()
 
     # convert en voltage
-    xn = np.divide((xn * 3.3),(2^16))
+    xn = (np.divide(xn, 65536)) * 3.3
 
     # Low-pass filter section
     bl, al = signal.butter(3, lowpass)
@@ -58,7 +58,7 @@ def filterr(ppandas):
     xn = df_r[y_data].to_numpy()
 
     #convert en voltage
-    xn = np.divide((xn * 3.3),(2^16))
+    xn = (np.divide(xn , 65536)) * 3.3
 
     # Low-pass filter section
     bl, al = signal.butter(3, lowpass)
@@ -86,6 +86,8 @@ def irdc(ppandas):
 
     df_ir = data[ir_mask]
     xn = df_ir[y_data].to_numpy()
+    # convert en voltage
+    xn = (np.divide(xn, 65536)) * 3.3
 
     return np.mean(xn)
 
@@ -97,7 +99,8 @@ def rdc(ppandas):
 
     df_r = data[r_mask]
     xn = df_r[y_data].to_numpy()
-
+    # convert en voltage
+    xn = (np.divide(xn, 65536)) * 3.3
     return np.mean(xn)
 
 

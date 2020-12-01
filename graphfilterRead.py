@@ -7,7 +7,8 @@ from scipy import stats
 import pickle
 import sklearn
 
-data = pd.read_csv("testfkndown" + ".csv", sep=",")
+selection = input("> file: ")
+data = pd.read_csv(selection + ".csv", sep=",")
 data = data[["TAG", "Value", "Time"]]
 
 #get data avec bruit
@@ -60,8 +61,8 @@ prediction = linear.predict(xprediction)
 
 df = pd.DataFrame({'Nom': selection, 'set': selectingb, 'RDC': rdc, 'IRDC': irdc, 'RACrms': racrms, 'IRACrms': iracrms, 'SaO2': trimSaO2, 'prediction': prediction[0]}, index=[0])
 print(df)
-
-
+strprint = selection + "," + selectingb + "," + str(rdc) + "," + str(irdc) + "," + str(racrms) + "," + str(iracrms) + "," + str(trimSaO2)
+print(strprint)
 
 #affichage des graph
 y_data = "Value"
