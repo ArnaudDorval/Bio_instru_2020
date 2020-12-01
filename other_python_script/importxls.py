@@ -34,14 +34,14 @@ print("moyenne ", bmean)
 
 
 #Low-pass filter section
-bl, al = signal.butter(3, 0.08)
+bl, al = signal.butter(3, 0.1)
 zi = signal.lfilter_zi(bl, al)
 z, _ = signal.lfilter(bl, al, xn, zi=zi*xn[0])
 z2, _ = signal.lfilter(bl, al, z, zi=zi*z[0])
 yl = signal.filtfilt(bl, al, xn)
 
 #High=pass filter section
-bh, ah = signal.butter(3, 0.01, btype='high', analog=False)
+bh, ah = signal.butter(3, 0.007, btype='high', analog=False)
 yh = signal.filtfilt(bh, ah, yl)
 
 
