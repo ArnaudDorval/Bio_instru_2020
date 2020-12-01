@@ -12,8 +12,10 @@ data = pd.read_csv(selection + ".csv", sep=",")
 data = data[["TAG", "Value", "Time"]]
 
 #get data avec bruit
+baseline_mask = data['TAG'] == "B"
 ir_mask = data['TAG'] == "I"
 red_mask = data['TAG'] == "R"
+df_baseline = data[baseline_mask]
 df_ir = data[ir_mask]
 df_r = data[red_mask]
 
@@ -68,18 +70,29 @@ print(strprint)
 y_data = "Value"
 x_data = "Time"
 
-pyplot.figure
+pyplot.figure(1)
+pyplot.scatter(df_baseline[x_data], df_baseline[y_data])
+pyplot.scatter(df_ir[x_data], df_ir[y_data])
+pyplot.scatter(df_r[x_data], df_r[y_data])
+pyplot.xlabel(x_data)
+pyplot.ylabel(y_data)
+pyplot.title('Raw Data')
+pyplot.legend(('signal baseline', 'signal r', 'signal ir'), loc='best')
+pyplot.grid(True)
+
+pyplot.figure(2)
 pyplot.subplot(3, 1, 1)
 style.use("ggplot")
 pyplot.scatter(df_ir[x_data], df_ir[y_data])
 pyplot.scatter(df_r[x_data], df_r[y_data])
-pyplot.legend(('noisy signal ir', 'noisy signal ir'), loc='best')
+pyplot.legend(('noisy signal ir', 'noisy signal r'), loc='best')
 pyplot.xlabel(x_data)
 pyplot.ylabel(y_data)
+pyplot.title('processed data')
 pyplot.grid(True)
 
 
-pyplot.figure
+pyplot.figure(2)
 pyplot.subplot(3, 1, 2)
 pyplot.plot(ir_data[x_data], ir_data[y_data])
 pyplot.plot(r_data[x_data], r_data[y_data])
@@ -89,7 +102,7 @@ pyplot.ylabel(y_data)
 pyplot.grid(True)
 
 
-pyplot.figure
+pyplot.figure(2)
 pyplot.subplot(3, 1, 3)
 pyplot.plot(df_r[x_data], SaO2)
 pyplot.legend(('SaO2'), loc='best')
