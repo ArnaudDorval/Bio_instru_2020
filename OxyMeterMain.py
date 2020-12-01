@@ -39,17 +39,20 @@ timeData = []
 tagData = []
 valueData = []
 
+counter = 0
 #get le data
 while data != "END\n":
     input_data = bluetooth.readline()
     data = input_data.decode("utf-8")
+    counter = counter + 1
     if data != "END\n":
-        d = data.rstrip()
-        datasplit = d.split(";")
-        if len(tagData) != 4249:
-            tagData.append(datasplit[0])
-            valueData.append(datasplit[1])
-            timeData.append(datasplit[2])
+        if counter > 500:
+            d = data.rstrip()
+            datasplit = d.split(";")
+            if len(tagData) != (4249 - 500):
+                tagData.append(datasplit[0])
+                valueData.append(datasplit[1])
+                timeData.append(datasplit[2])
 
 
 #sauvegarde to csv
@@ -63,8 +66,10 @@ data = pd.read_csv(selection + ".csv", sep=",")
 data = data[["TAG", "Value", "Time"]]
 
 #get data avec bruit
+baseline_mask = data['TAG'] == "B"
 ir_mask = data['TAG'] == "I"
 red_mask = data['TAG'] == "R"
+df_baseline = data[baseline_mask]
 df_ir = data[ir_mask]
 df_r = data[red_mask]
 
@@ -82,19 +87,21 @@ x_ir = np.divide(x_ir, irdc)
 x_r = r_data["Value"].to_numpy()
 x_r = np.divide(x_r, rdc)
 
-SaO2 = np.divide(x_r,x_ir)
-SaO2 = 110-25*SaO2;
-trimSaO2 = stats.trim_mean(SaO2, 0.1)
 iracrms = lib.vrms(ir_data)
 racrms = lib.vrms(r_data)
+
+SaO2 = np.divide(x_r,x_ir)
+SaO2 = 110-25*SaO2;
+rmsSaO2 = 110-25*racrms/iracrms
+trimSaO2 = stats.trim_mean(SaO2, 0.05)
 
 
 
 #Nom,set,RDC,IRDC,RACrms,IRACrms,SaO2
 selection = input("> Name: ")
 selectingb = input("> Set: ")
-dict = {'Nom': selection, 'set': selectingb, 'RDC': rdc, 'IRDC': irdc, 'RACrms': racrms, 'IRACrms': iracrms, 'SaO2': trimSaO2}
-df = pd.DataFrame({'Nom': selection, 'set': selectingb, 'RDC': rdc, 'IRDC': irdc, 'RACrms': racrms, 'IRACrms': iracrms, 'SaO2': trimSaO2}, index=[0])
+dict = {'Nom': selection, 'set': selectingb, 'RDC': rdc, 'IRDC': irdc, 'RACrms': racrms, 'IRACrms': iracrms, 'SaO2': trimSaO2, 'rmsSaO2': rmsSaO2}
+df = pd.DataFrame({'Nom': selection, 'set': selectingb, 'RDC': rdc, 'IRDC': irdc, 'RACrms': racrms, 'IRACrms': iracrms, 'SaO2': trimSaO2, 'rmsSaO2': rmsSaO2}, index=[0])
 print(df.head())
 
 #Prediction SaO2
@@ -102,16 +109,18 @@ newPoint = np.array(df[["RDC", "IRDC", "RACrms", "IRACrms"]])
 newSaO2 = np.array(df[["SaO2"]])
 predict = "SaO2"
 
-xprediction = np.array(newPoint.drop([predict], 1))
+xprediction = np.array(newPoint)
+yprediction = np.array(newSaO2)
 
 pickle_in = open("student-model.pickle", "rb")
 linear = pickle.load(pickle_in)
 
 prediction = linear.predict(xprediction)
 
-for i in range(len(prediction)):
-    print(prediction[i], newSaO2)
-
+df = pd.DataFrame({'Nom': selection, 'set': selectingb, 'RDC': rdc, 'IRDC': irdc, 'RACrms': racrms, 'IRACrms': iracrms, 'SaO2': trimSaO2, 'prediction': prediction[0]}, index=[0])
+print(df)
+strprint = selection + "," + selectingb + "," + str(rdc) + "," + str(irdc) + "," + str(racrms) + "," + str(iracrms) + "," + str(trimSaO2)
+print(strprint)
 
 y_data = "Value"
 x_data = "Time"

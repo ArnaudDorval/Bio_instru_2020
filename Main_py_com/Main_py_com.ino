@@ -12,7 +12,7 @@ int digitalWait = 30;
 String command;
 int timeStamp = 0;
 int val;
-int transitDelay = 200:
+int transitDelay = 150;
  
 void setup() {
     Serial.begin(57600);

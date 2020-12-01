@@ -34,18 +34,21 @@ x_ir = np.divide(x_ir, irdc)
 x_r = r_data["Value"].to_numpy()
 x_r = np.divide(x_r, rdc)
 
-SaO2 = np.divide(x_r,x_ir)
-SaO2 = 110-25*SaO2;
-trimSaO2 = stats.trim_mean(SaO2, 0.1)
 iracrms = lib.vrms(ir_data)
 racrms = lib.vrms(r_data)
+
+SaO2 = np.divide(x_r,x_ir)
+SaO2 = 110-25*SaO2;
+rmsSaO2 = 110-25*racrms/iracrms
+trimSaO2 = stats.trim_mean(SaO2, 0.1)
+
 
 
 #affichage des resultats
 #Nom,set,RDC,IRDC,RACrms,IRACrms,SaO2
 selection = input("> Name: ")
 selectingb = input("> Set: ")
-df = pd.DataFrame({'Nom': selection, 'set': selectingb, 'RDC': rdc, 'IRDC': irdc, 'RACrms': racrms, 'IRACrms': iracrms, 'SaO2': trimSaO2}, index=[0])
+df = pd.DataFrame({'Nom': selection, 'set': selectingb, 'RDC': rdc, 'IRDC': irdc, 'RACrms': racrms, 'IRACrms': iracrms, 'SaO2': trimSaO2, 'rmsSaO2': rmsSaO2}, index=[0])
 print(df.head())
 
 #Prediction SaO2

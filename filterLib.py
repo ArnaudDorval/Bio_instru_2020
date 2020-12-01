@@ -11,8 +11,8 @@ def filterir(ppandas):
 
     y_data = "Value"
     x_data = "Time"
-    lowpass = 0.1;
-    highpass = 0.009;
+    lowpass = 0.07;
+    highpass = 0.004;
 
     df_ir = data[ir_mask]
     df_baseline = data[baseline_mask]
@@ -49,8 +49,8 @@ def filterr(ppandas):
 
     y_data = "Value"
     x_data = "Time"
-    lowpass = 0.1;
-    highpass = 0.009;
+    lowpass = 0.07;
+    highpass = 0.004;
 
     df_r = data[r_mask]
 

@@ -5,7 +5,7 @@ from sklearn import linear_model
 import pickle
 
 
-data = pd.read_csv("BilanA.csv", sep=",")
+data = pd.read_csv("BilanB.csv", sep=",")
 print(data.head())
 
 data = data[["RDC", "IRDC", "RACrms", "IRACrms", "SaO2"]]
@@ -19,7 +19,7 @@ y = np.array(data[predict])
 x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x,y, test_size = 0.1)
 
 best = 0
-for i in range(50):
+for i in range(100):
 
     x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x, y, test_size = 0.1)
 
