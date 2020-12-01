@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cec55141-1a6f-4e4f-a7bc-0e85fe8f78f4" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kz1bam5wxCsNsxBc6jg0KNJrLd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\arnau\OneDrive\Documents\Universite\Automne 2020\BioInstru\Bio_instru_2020" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\arnau\OneDrive\Documents\Universite\Automne 2020\BioInstru\Bio_instru_2020" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.graphfilterRead">
+    <configuration name="BleGetData" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Bio_instru_2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\arnau\anaconda3\envs\tensorflowEnv\pythonw.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AI_lab" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AI_lab/BleGetData.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="BluetootTest" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Bio_instru_2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\arnau\anaconda3\envs\tensorflowEnv\pythonw.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AI_lab" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AI_lab/BluetootTest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ModelGenerator" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Bio_instru_2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\arnau\anaconda3\envs\tensorflowEnv\pythonw.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AI_lab" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AI_lab/ModelGenerator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ModelTest" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Bio_instru_2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\arnau\anaconda3\envs\tensorflowEnv\pythonw.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AI_lab" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AI_lab/ModelTest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="OxyMeterMain" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Bio_instru_2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\arnau\anaconda3\envs\tensorflowEnv\pythonw.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/OxyMeterMain.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="bluetoothDiscovery" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Bio_instru_2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\arnau\anaconda3\envs\tensorflowEnv\pythonw.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AI_lab" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AI_lab/bluetoothDiscovery.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="datafilterfkndown" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Bio_instru_2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\arnau\anaconda3\envs\tensorflowEnv\pythonw.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datafilterfkndown.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="filtertest" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Bio_instru_2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\arnau\anaconda3\envs\tensorflowEnv\pythonw.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/filtertest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fknputefilter" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Bio_instru_2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\arnau\anaconda3\envs\tensorflowEnv\pythonw.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fknputefilter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="graphRead" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Bio_instru_2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\arnau\anaconda3\envs\tensorflowEnv\pythonw.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AI_lab" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AI_lab/graphRead.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="graphfilterRead" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Bio_instru_2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\arnau\anaconda3\envs\tensorflowEnv\pythonw.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graphfilterRead.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="importxls" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Bio_instru_2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\arnau\anaconda3\envs\tensorflowEnv\pythonw.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/importxls.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="simplotplot" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Bio_instru_2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\arnau\anaconda3\envs\tensorflowEnv\pythonw.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AI_lab" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AI_lab/simplotplot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.graphRead" />
+      <item itemvalue="Python.filtertest" />
+      <item itemvalue="Python.importxls" />
+      <item itemvalue="Python.graphfilterRead" />
+      <item itemvalue="Python.OxyMeterMain" />
+      <item itemvalue="Python.datafilterfkndown" />
+      <item itemvalue="Python.fknputefilter" />
+      <item itemvalue="Python.BleGetData" />
+      <item itemvalue="Python.bluetoothDiscovery" />
+      <item itemvalue="Python.BluetootTest" />
+      <item itemvalue="Python.ModelGenerator" />
+      <item itemvalue="Python.ModelTest" />
+      <item itemvalue="Python.simplotplot" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cec55141-1a6f-4e4f-a7bc-0e85fe8f78f4" name="Default Changelist" comment="" />
+      <created>1606688677532</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606688677532</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2326" y="-75" width="1092" height="978" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606783278951">
+      <screen x="1920" y="-137" width="1920" height="1040" />
+    </state>
+    <state x="325" y="120" width="874" height="704" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/3840.-91.1280.984/1920.-137.1920.1040@0.0.1536.824" timestamp="1606765761262" />
+    <state x="2326" y="-75" width="1092" height="978" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/3840.-91.1280.984/1920.-137.1920.1040@1920.-137.1920.1040" timestamp="1606783278951" />
+    <state x="2652" y="194" key="FileChooserDialogImpl" timestamp="1606783276856">
+      <screen x="1920" y="-137" width="1920" height="1040" />
+    </state>
+    <state x="586" y="262" key="FileChooserDialogImpl/0.0.1536.824/3840.-91.1280.984/1920.-137.1920.1040@0.0.1536.824" timestamp="1606765759847" />
+    <state x="2652" y="194" key="FileChooserDialogImpl/0.0.1536.824/3840.-91.1280.984/1920.-137.1920.1040@1920.-137.1920.1040" timestamp="1606783276856" />
+    <state width="1899" height="255" key="GridCell.Tab.0.bottom" timestamp="1606783741780">
+      <screen x="1920" y="-137" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="255" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.-91.1280.984/1920.-137.1920.1040@1920.-137.1920.1040" timestamp="1606783741780" />
+    <state width="1899" height="255" key="GridCell.Tab.0.center" timestamp="1606783741779">
+      <screen x="1920" y="-137" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="255" key="GridCell.Tab.0.center/0.0.1536.824/3840.-91.1280.984/1920.-137.1920.1040@1920.-137.1920.1040" timestamp="1606783741779" />
+    <state width="1899" height="255" key="GridCell.Tab.0.left" timestamp="1606783741779">
+      <screen x="1920" y="-137" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="255" key="GridCell.Tab.0.left/0.0.1536.824/3840.-91.1280.984/1920.-137.1920.1040@1920.-137.1920.1040" timestamp="1606783741779" />
+    <state width="1899" height="255" key="GridCell.Tab.0.right" timestamp="1606783741779">
+      <screen x="1920" y="-137" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="255" key="GridCell.Tab.0.right/0.0.1536.824/3840.-91.1280.984/1920.-137.1920.1040@1920.-137.1920.1040" timestamp="1606783741779" />
+    <state width="938" height="351" key="GridCell.Tab.1.bottom" timestamp="1606783465507">
+      <screen x="1920" y="-137" width="1920" height="1040" />
+    </state>
+    <state width="938" height="351" key="GridCell.Tab.1.bottom/0.0.1536.824/3840.-91.1280.984/1920.-137.1920.1040@1920.-137.1920.1040" timestamp="1606783465507" />
+    <state width="938" height="351" key="GridCell.Tab.1.center" timestamp="1606783465507">
+      <screen x="1920" y="-137" width="1920" height="1040" />
+    </state>
+    <state width="938" height="351" key="GridCell.Tab.1.center/0.0.1536.824/3840.-91.1280.984/1920.-137.1920.1040@1920.-137.1920.1040" timestamp="1606783465507" />
+    <state width="938" height="351" key="GridCell.Tab.1.left" timestamp="1606783465507">
+      <screen x="1920" y="-137" width="1920" height="1040" />
+    </state>
+    <state width="938" height="351" key="GridCell.Tab.1.left/0.0.1536.824/3840.-91.1280.984/1920.-137.1920.1040@1920.-137.1920.1040" timestamp="1606783465507" />
+    <state width="938" height="351" key="GridCell.Tab.1.right" timestamp="1606783465507">
+      <screen x="1920" y="-137" width="1920" height="1040" />
+    </state>
+    <state width="938" height="351" key="GridCell.Tab.1.right/0.0.1536.824/3840.-91.1280.984/1920.-137.1920.1040@1920.-137.1920.1040" timestamp="1606783465507" />
+    <state x="2373" y="72" key="SettingsEditor" timestamp="1606765866571">
+      <screen x="1920" y="-137" width="1920" height="1040" />
+    </state>
+    <state x="2373" y="72" key="SettingsEditor/0.0.1536.824/3840.-91.1280.984/1920.-137.1920.1040@1920.-137.1920.1040" timestamp="1606765866571" />
+    <state x="2875" y="-137" width="972" height="1047" key="dock-window-1" timestamp="1606783098739">
+      <screen x="1920" y="-137" width="1920" height="1040" />
+    </state>
+    <state x="2875" y="-137" width="972" height="1047" key="dock-window-1/0.0.1536.824/3840.-91.1280.984/1920.-137.1920.1040@1920.-137.1920.1040" timestamp="1606783098739" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/OxyMeterMain.py</url>
+          <line>115</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
