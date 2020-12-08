@@ -7,7 +7,7 @@ from scipy import signal
 
 #selection = input("> Enter Data Name ")
 #checker les donnees
-data = pd.read_csv("test14" + ".csv", sep=",")
+data = pd.read_csv("testfkndown" + ".csv", sep=",")
 data = data[["TAG", "Value", "Time"]]
 
 baseline_mask = data['TAG'] == "B"
@@ -60,35 +60,42 @@ ylr = signal.filtfilt(blr, alr, xr)
 bhr, ahr = signal.butter(3, highvar, btype='high', analog=False)
 yhr = signal.filtfilt(bhr, ahr, ylr)
 
-pyplot.figure(1)
-pyplot.subplot(2, 1, 2)
-style.use("ggplot")
-#pyplot.scatter(df_baseline[x_data], df_baseline[y_data])
-pyplot.scatter(df_ir[x_data], df_ir[y_data])
-#pyplot.scatter(df_red[x_data], df_red[y_data])
-pyplot.plot(t, yl, 'k')
-pyplot.legend(('filtfilt', 'noisy signal'), loc='best')
-pyplot.grid(True)
-pyplot.xlabel(x_data)
-pyplot.ylabel(y_data)
 
-pyplot.subplot(2, 1, 1)
-pyplot.plot(t, yh)
-pyplot.grid(True)
 
-pyplot.figure(2)
-pyplot.subplot(2, 1, 2)
-style.use("ggplot")
-#pyplot.scatter(df_baseline[x_data], df_baseline[y_data])
-pyplot.scatter(df_red[x_data], df_red[y_data])
-#pyplot.scatter(df_red[x_data], df_red[y_data])
-pyplot.plot(tr, ylr, 'k')
-pyplot.legend(('filtfilt', 'noisy signal'), loc='best')
-pyplot.grid(True)
-pyplot.xlabel(x_data)
-pyplot.ylabel(y_data)
+######################################################################################################
+fig, axs = pyplot.subplots(2, 1, constrained_layout=True)
+axs[0].scatter(df_ir[x_data], df_ir[y_data])
+axs[0].plot(t, yl, 'k')
+axs[0].set_xlabel('time (ms)')
+axs[0].set_ylabel('Point (bit)')
+axs[0].set_title('Low Pass Filter & Interpolation', ha='center')
+axs[0].legend(('filtered', 'raw signal'), loc='best')
+axs[0].grid(True)
+fig.suptitle('Data Filtering IR Signal', fontsize=16, ha='center')
 
-pyplot.subplot(2, 1, 1)
-pyplot.plot(tr, yhr)
-pyplot.grid(True)
+axs[1].plot(t, yh)
+axs[1].set_xlabel('time (ms)')
+axs[1].set_title('High Pass Filter')
+axs[1].set_ylabel('Point (bit)')
+axs[1].grid(True)
+
+
+######################################################################################################
+fig, axs = pyplot.subplots(2, 1, constrained_layout=True)
+axs[0].scatter(df_red[x_data], df_red[y_data], color='red')
+axs[0].plot(tr, ylr, 'k')
+axs[0].set_xlabel('time (ms)')
+axs[0].set_ylabel('Point (bit)')
+axs[0].set_title('Low Pass Filter & Interpolation', ha='center')
+axs[0].legend(('filtered', 'raw signal'), loc='best')
+axs[0].grid(True)
+fig.suptitle('Data Filtering RED Signal', fontsize=16, ha='center')
+
+axs[1].plot(tr, yhr, color='red')
+axs[1].set_xlabel('time (ms)')
+axs[1].set_title('High Pass Filter')
+axs[1].set_ylabel('Point (bit)')
+axs[1].grid(True)
+
+
 pyplot.show()
