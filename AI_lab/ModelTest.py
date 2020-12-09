@@ -6,7 +6,7 @@ import matplotlib.pyplot as pyplot
 import pickle
 from matplotlib import style
 
-data = pd.read_csv("BilanA.csv", sep=",")
+data = pd.read_csv("BilanB.csv", sep=",")
 #print(data.head())
 
 data = data[["RDC", "IRDC", "RACrms", "IRACrms", "SaO2"]]

@@ -40,7 +40,7 @@ racrms = lib.vrms(r_data)
 SaO2 = np.divide(x_r,x_ir)
 SaO2 = 110-25*SaO2;
 rmsSaO2 = 110-25*racrms/iracrms
-trimSaO2 = stats.trim_mean(SaO2, 0.1)
+trimSaO2 = stats.trim_mean(SaO2, 0.05)
 
 
 

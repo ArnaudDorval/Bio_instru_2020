@@ -19,7 +19,7 @@ y = np.array(data[predict])
 x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x,y, test_size = 0.1)
 
 best = 0
-for i in range(100):
+for i in range(500):
 
     x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x, y, test_size = 0.1)
 
@@ -44,3 +44,4 @@ linear = pickle.load(pickle_in)
 
 print("Co: \n", linear.coef_)
 print("Intercept: \n", linear.intercept_)
+print("Score: \n", best)
